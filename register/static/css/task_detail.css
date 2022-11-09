@@ -1,0 +1,26 @@
+.content_button_task_detail{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.button_save_task_detail, .button_delete_task_detail, .button_complete_task_detail{
+    width: 40%;
+    border: none;
+    padding: 5px 0;
+    border-radius: 3px;
+    color: white;
+}
+
+.button_save_task_detail{
+    background-color: rgb(81, 194, 81);
+}
+
+.button_complete_task_detail{
+    background-color: royalblue;
+}
+
+
+.button_delete_task_detail{
+    background-color: rgba(243, 76, 76, 0.849);
+}

@@ -1,0 +1,58 @@
+{% extends "layouts/header_page.html" %}
+
+{% block content %}
+<main class="main_task">
+    <section class="section_task">
+        <div class="div_content_task_complete">
+            <ul class="content_ul_task content_ul_task_complete">
+                <h3 class="title_complete">Tasks completed</h3>
+                {% for task in tasks %}
+                    {% if task.datecomplete %}
+                    <li class="content_li_task">
+                        <a href="{% url 'task_detail' task.id %}" class="target_task">
+                            <h2 class="task_title">{{task.title}}</h2>
+                            <p class="task_description">{{task.description}}</p>
+                            <div class="div_content_date_user">
+                                <p class="paragraf_create">Task create by <span class="user_profile">{{task.user}}</span></p>
+                                <p >{{task.create}}</p>
+                            </div>
+                            {% if task.datecomplete %}
+                                <p class="p_content_datecomplete">Task complete</p>
+                            {% else %}
+                                <p class="p_content_nodatecomplete">Pending task</p>
+                            {% endif %}
+                        </a>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="div_content_task_nocomplete">
+            <ul class="content_ul_task content_ul_task_nocomplete">
+                <h3 class="title_nocomplete">Pending task</h3>
+                {% for task in tasks %}
+                    {% if task.datecomplete == Null %}
+                    <li class="content_li_task">
+                        <a href="{% url 'task_detail' task.id %}" class="target_task">
+                            <h2 class="task_title">{{task.title}}</h2>
+                            <p class="task_description">{{task.description}}</p>
+                            <div class="div_content_date_user">
+                                <p class="paragraf_create">Task create by <span class="user_profile">{{task.user}}</span></p>
+                                <p >{{task.create}}</p>
+                            </div>
+                            {% if task.datecomplete %}
+                                <p class="p_content_datecomplete">Task complete</p>
+                            {% else %}
+                                <p class="p_content_nodatecomplete">Pending task</p>
+                            {% endif %}
+                        </a>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+</main>
+
+{% endblock %}

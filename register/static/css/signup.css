@@ -1,0 +1,51 @@
+.main_signup{
+    padding: 50px 0;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.section_signup{
+    border-radius: 5px;
+    margin: 0 auto;
+    border: 2px solid gray;
+    max-width: 600px;
+    padding: 30px;
+}
+
+.form_signup{
+    margin: 0 auto;
+}
+
+.form_signup > div > label{
+    font-size: 1.2rem;
+}
+
+.helptext{
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.form_signup > div > input {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width:100%;
+    padding: 3px 0;
+    font-size: 1.1rem;
+}
+
+
+.helptext > ul{
+    list-style-type: none;
+}
+
+
+.button_register_signup{
+    width: 100%;
+    background-color: royalblue;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    padding: 15px 0;
+    margin-top: 10px;
+}

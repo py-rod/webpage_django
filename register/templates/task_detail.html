@@ -1,0 +1,37 @@
+{% extends 'layouts/header_page.html' %}
+
+
+
+{% block content %}
+<main class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md4 mt-5 m-auto">
+            <form method="post" class="card card-body">
+                <h2 class="task_detail m-auto">Task detail</h2>
+                <p class="error_task_deatil">
+                    {{error}}
+                </p>
+                {% csrf_token %}
+                
+                {{form}}
+
+
+                <div class="content_button_task_detail">
+                    {% if task.datecomplete %}
+                        <form action="{% url 'task_delete' task.id %}" method="post">
+                            {% csrf_token %}
+                            <button class="button_save_task_detail">Save</button>
+                            <button class="button_delete_task_detail">Delete</button>
+                        </form>
+                    {% else %}
+                        <form action="{% url 'task_complete' task.id %}" method="post">
+                            {% csrf_token %}
+                            <button class="button_save_task_detail">Save</button>
+                            <button class="button_complete_task_detail">Complete</button>
+                        </form>
+                    {% endif %}
+                </div>
+            </form>
+    </div>
+</main>
+{% endblock %}

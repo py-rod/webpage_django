@@ -1,0 +1,53 @@
+.main_login{
+    padding: 100px 0;
+    min-height: 100vh;
+}
+
+.section_login{
+    max-width: 500px;
+    border: 2px solid gray;
+    box-shadow: -5px 5px 5px gray;
+    border-radius: 5px;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+.error_message_login{
+    text-align: center;
+    color: rgb(255, 0, 0);
+    margin-bottom: 20px;
+}
+
+.form_login > div > label{
+    font-size: 1.2rem;
+}
+
+.form_login > div > input{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid black;
+    padding: 3px 0;
+}
+
+.form_login > div > input:focus{
+    outline: 2px solid royalblue;
+    border: 1px solid royalblue;
+}
+
+
+.button_login{
+    width: 100%;
+    padding: 15px 0;
+    color: white;
+    font-size: 1.18rem;
+    background-color: royalblue;
+    border: none;
+    border-radius: 5px;
+}
+
+.button_login:hover{
+    background-color: rgb(24, 24, 224);
+}

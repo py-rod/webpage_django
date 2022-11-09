@@ -1,0 +1,16 @@
+{% extends "layouts/header_page.html" %}
+
+{% block content %}
+<main class="main_signup">
+    <section class="section_signup">
+        <form action="/signup/" method="POST" class="form_signup">
+            <p class="error_message">
+                {{error}}
+            </p>
+            {% csrf_token %}
+            {{form.as_div}}
+            <button class="button_register_signup">Register</button>
+        </form> 
+    </section>   
+</main>
+{% endblock %}
